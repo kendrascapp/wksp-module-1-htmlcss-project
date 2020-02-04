@@ -1,0 +1,254 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+h1, h2, h3{
+    margin: 0;
+}
+.main-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: rgb(53, 54, 58);
+    color: white;
+    word-spacing: 70px;
+    text-align: right;
+    padding: 40px;
+}
+
+.nav-dropdown {
+    padding: 20px;
+    color:white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown:hover > .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(247, 125, 166);
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.menu-list {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list > li {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+    word-spacing: 2px;
+}
+
+.menu-list > li:hover {
+    background-color: lightpink;
+}
+
+.banner {
+    background-image: url(clouds.jpeg);
+    margin: 0;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10% 15%;
+}
+div.transbox {
+    border: 10px solid white;
+    display: flex;
+    font-family: Poppins;
+    color: white;
+}
+.transbox h1{
+    font-size: 68px;
+}
+.transbox h3{
+    font-size: 44px;
+    margin: 25px 0;
+}
+.transbox p{
+    font-size: 18px;
+}
+.transbox-left{
+    flex: 30%;
+    padding: 40px 10px;
+}
+.transbox-right{
+    background: rgba(0, 0, 0, 0.5);
+    flex: 70%;
+    padding: 30px 20px;
+}
+.transbox-right-top{
+    display: flex;
+    border-bottom: 1px dashed white;
+}
+.transbox-right-bottom{
+    display: flex;
+    margin: 25px 0;
+}
+.transbox-right-bottom p {
+    flex: 50%;
+    padding-right: 10px;
+}
+a {
+    color: white;
+    padding-left: 80px;
+    align-items: center;
+}
+a:hover {
+    transition: 0.2s;
+}
+.image:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.amazingfeatures {
+	padding: 10px;
+	margin: 30px;
+	align-items: center;
+    background-color: white;
+    display: flex;
+    color: black;
+}
+.amazingfeatures p {
+    margin-bottom: 60px;
+}
+
+.amazing1 {
+    border: 3px solid pink;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 33.3%;
+    margin: 40px;
+}
+.amazing2 {
+    border: 3px solid pink;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 33.3%;
+    margin: 40px;
+}
+.amazing3 {
+    border: 3px solid pink;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 33.3%;
+    margin: 40px;
+}
+
+.amazing1 button {
+    background-color: pink;
+    text-align: center;
+    padding: 10px;
+    border-color: pink;
+}
+
+.amazing2 button {
+    background-color: pink;
+    text-align: center;
+    padding: 10px;
+    border-color: pink;
+}
+
+.amazing3 button {
+    background-color: pink;
+    text-align: center;
+    padding: 10px;
+    border-color: pink;
+}
+
+.greybox {
+    background-color: rgb(53, 54, 58);
+    height: 400px;
+}
+.greybox h2 {
+    text-align: center;
+    font-size: 5em;
+}
+.greybox p {
+    text-align: center; 
+    font-size: 3em;
+    font-style: italic;
+}
+
+.gradient1 {
+    height: 500px;
+    background-color: pink;
+    background-image: linear-gradient(to right, pink , rgb(174, 64, 174));
+    text-align: right;
+    padding: 60px;
+    font-size: 5em;
+}
+
+.gallery1, .gallery2{
+    display: flex;
+}
+.img-wrapper{
+    flex: 33.33%;
+}
+.gallery img{
+    vertical-align: middle;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 360px;
+}
+
+footer {
+    display: flex;
+}
+.footcontainer {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    opacity: 100%;
+    flex: 25%;
+}
+
+/* things I have learned
+Getting the overall layout was the hardest part for me. I was afraid of making too many 
+classes / divs and getting lost in it, but you need them to break things up.
+In the beginning I kept trying to apply too many elements to a general class instead of breaking it up. 
+GOING INTO THE BROWSER, INSPECTIN WITH DEV TOOLS CAN HELP YOU SEE CHANGES IN LIVE TIME, 
+AND PINPOINT WHERE THE STYLES ARE COMING FROM. 
+BROWSERS HAVE BUILT IN STYLE FILLER, AND YOU NEED TO OVERRIDE IT.
+HIERARCHY is everything with class. To make things accurate and pinpoint small details,
+adding a parent class is helpful. 
+display flex ON PARENT not child. 
+you can specify the flex amount / size on the child. percentages % or flex-grow: 1; 
+holy grail for fitting objects of different heights together: 
+object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+think about diving things into boxes visually. 
+for example, the translucent box. There was 2 sections. think of this as 2 boxes. 
+every box is a new div (section). 
+PADDING makes more space on the INSIDE. 
+If you want to shrink a child you add padding to parent.
+MARGIN makes more space on the OUTSIDE. 
+if you want to shrink the parent, you margin or go to the parent's parent. 
+BACKGROUND IMAGE:
+    height: 500px;  - the height allows for white space underneath the image
+    background-size: cover; - makes it cover the width 
+    background-repeat: no-repeat; - makes it not multiply to fill up space.
+FOOTER:
+If you want it to show up 4 times, you have to write it 4 times, but you can name the div class
+all the same, so you can modify all 4 at once in CSS - again, display:flex on parent, and 
+then specific division % of space on children (so making it repeat 4 times)
+    */
